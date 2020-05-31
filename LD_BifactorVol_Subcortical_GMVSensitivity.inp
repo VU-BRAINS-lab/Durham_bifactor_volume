@@ -1,0 +1,315 @@
+TITLE: FULL ABCD W1 SAMPLE CBCL FACTORS AND VOLUME
+SUBCORTICAL GMV SENSITIVITY;
+
+DATA:  FILE is Cortical_Volume.dat;
+  
+VARIABLE: NAMES ARE  
+
+subnum_char age FEMALE PSWEIGHT FAMID rel_relationship demorim siten
+white NHWHITE AFRICAN HISPANIC OTHER cbcl01 cbcl03 cbcl04
+cbcl05 cbcl07 cbcl09 cbcl10 cbcl13 cbcl15 cbcl16 cbcl17
+cbcl19 cbcl22 cbcl23 cbcl25 cbcl26 cbcl27 cbcl28 cbcl30
+cbcl31 cbcl32 cbcl33 cbcl34 cbcl35 cbcl36 cbcl37 cbcl39
+cbcl41 cbcl42 cbcl43 cbcl46 cbcl50 cbcl51 cbcl52 cbcl56a
+cbcl56b cbcl56c cbcl56f cbcl56g cbcl56h cbcl57 cbcl61 cbcl62
+cbcl65 cbcl66 cbcl68 cbcl69 cbcl71 cbcl72 cbcl74 cbcl75
+cbcl80 cbcl81 cbcl82 cbcl84 cbcl85 cbcl86 cbcl87 cbcl88
+cbcl89 cbcl90 cbcl93 cbcl94 cbcl95 cbcl97 cbcl102 cbcl103
+cbcl106 cbcl109 cbcl111 cbcl112 ATTEND DESTROY UPPSLPRE UPPSLPER
+UPPSNEG UPPSPOS UPPSSS prosocp prosocy CASHCHOICE RAVLT SUSPEND
+MHSERVICE SPEDE SPEDL cardsort flanker list pattern picture
+PPVT reading wiscv lmt OFFY SINJY HAVETWIN MATAGE
+PREMATURE WEEKSPRE GESTAGE GOTCBCL TICV dti_motion MRIGE MRIP
+MRIS COIL1 COIL2 COIL3 COIL4 COIL5 income income_log
+parent_education mom_education dad_education medication 
+mrif_score fsqc_qc fsqc_qu_motion fsqc_qu_pialover
+fsqc_qu_wmunder fsqc_qu_inhomogeneity dmri_dti_meanmotion 
+ksads_754_p ksads_755_p ksads_756_p ksads_757_p ksads_758_p
+ksads_759_p ksads_760_p ksads_761_p ksads_762_p ksads_763_p 
+ksads_764_p ksads_765_p ksads_766_p
+ksads_767_p ksads_768_p ksads_769_p ksads_770_p fes_q1 fes_q2 fes_q3 fes_q4
+fes_q5 fes_q6 fes_q7 fes_q8 fes_q9 fes_1_p fes_2r_p fes_3_p
+fes_4r_p fes_5_p fes_6_p fes_7r_p fes_8_p fes_9_p subcortical_sum vol_1
+vol_2 vol_3 vol_4 vol_5 vol_6 vol_7 vol_8 vol_9
+vol_10 vol_11 vol_12 vol_13 vol_14 vol_15 vol_16 vol_17
+vol_18 vol_19 vol_20 vol_21 vol_22 vol_23 vol_24 vol_25
+vol_26 vol_27 vol_28 vol_29 vol_30 vol_31 vol_32 vol_33
+vol_34 vol_35 vol_36 vol_37 vol_38 vol_39 vol_40 vol_41
+vol_42 vol_43 vol_44 vol_45 vol_46 vol_47 vol_48 vol_49
+vol_50 vol_51 vol_52 vol_53 vol_54 vol_55 vol_56 vol_57
+vol_58 vol_59 vol_60 vol_61 vol_62 vol_63 vol_64 vol_65
+vol_66 vol_67 vol_68 vol_69 vol_70 vol_71 vol_72 vol_73
+vol_74 vol_75 vol_76 vol_77 vol_78 vol_79 vol_80 vol_81
+vol_82 vol_83 vol_84 vol_85 vol_86 vol_87 vol_88 vol_89
+vol_90 vol_91 vol_92 vol_93 vol_94 vol_95 vol_96 vol_97
+vol_98 vol_99 vol_100 vol_101 vol_102 vol_103 vol_104 vol_105
+vol_106 vol_107 vol_108 vol_109 vol_110 vol_111 vol_112 vol_113
+vol_114 vol_115 vol_116 vol_117 vol_118 vol_119 vol_120 vol_121
+vol_122 vol_123 vol_124 vol_125 vol_126 vol_127 vol_128 vol_129
+vol_130 vol_131 vol_132 vol_133 vol_134 vol_135 vol_136 vol_137
+vol_138 vol_139 vol_140 vol_141 vol_142 vol_143 vol_144 vol_145
+vol_146 vol_147 vol_148 vol_149 vol_150 vol_151 vol_152 vol_153
+vol_154 vol_155 vol_156 vol_157 vol_158 vol_159 vol_160 vol_161
+vol_162 vol_163 vol_164 vol_165 vol_166 vol_167 vol_168 vol_169
+vol_170 vol_171 vol_172 vol_173 vol_174 vol_175 vol_176 vol_177
+vol_178 vol_179 vol_180 vol_181 vol_182 vol_183 vol_184 vol_185
+vol_186 vol_187 vol_188 vol_189 vol_190 vol_191 vol_192 vol_193
+vol_194 vol_195 vol_196 vol_197 vol_198 vol_199 vol_200 vol_201
+vol_202 vol_203 vol_204 vol_205 vol_206 vol_207 vol_208 vol_209
+vol_210 vol_211 vol_212 vol_213 vol_214 vol_215 vol_216 vol_217
+vol_218 vol_219 vol_220 vol_221 vol_222 vol_223 vol_224 vol_225
+vol_226 vol_227 vol_228 vol_229 vol_230 vol_231 vol_232 vol_233
+vol_234 vol_235 vol_236 vol_237 vol_238 vol_239 vol_240 vol_241
+vol_242 vol_243 vol_244 vol_245 vol_246 vol_247 vol_248 vol_249
+vol_250 vol_251 vol_252 vol_253 vol_254 vol_255 vol_256 vol_257
+vol_258 vol_259 vol_260 vol_261 vol_262 vol_263 vol_264 vol_265
+vol_266 vol_267 vol_268 vol_269 vol_270 vol_271 vol_272 vol_273
+vol_274 vol_275 vol_276 vol_277 vol_278 vol_279 vol_280 vol_281
+vol_282 vol_283 vol_284 vol_285 vol_286 vol_287 vol_288 vol_289
+vol_290 vol_291 vol_292 vol_293 vol_294 vol_295 vol_296 vol_297
+vol_298 vol_299 vol_300 vol_301 vol_302 vol_303 vol_304 vol_1_R
+vol_2_R vol_3_R vol_4_R vol_5_R vol_6_R vol_7_R vol_8_R vol_9_R
+vol_10_R vol_11_R vol_12_R vol_13_R vol_14_R vol_15_R vol_16_R vol_17_R
+vol_18_R vol_19_R vol_20_R vol_21_R vol_22_R vol_23_R vol_24_R vol_25_R
+vol_26_R vol_27_R vol_28_R vol_29_R vol_30_R vol_31_R vol_32_R vol_33_R
+vol_34_R vol_35_R vol_36_R vol_37_R vol_38_R vol_39_R vol_40_R vol_41_R
+vol_42_R vol_43_R vol_44_R vol_45_R vol_46_R vol_47_R vol_48_R vol_49_R
+vol_50_R vol_51_R vol_52_R vol_53_R vol_54_R vol_55_R vol_56_R vol_57_R
+vol_58_R vol_59_R vol_60_R vol_61_R vol_62_R vol_63_R vol_64_R vol_65_R
+vol_66_R vol_67_R vol_68_R vol_105_R vol_106_R vol_108_R vol_109_R vol_110_R
+vol_111_R vol_112_R vol_113_R vol_114_R vol_115_R vol_116_R vol_117_R vol_118_R
+vol_119_R vol_120_R vol_121_R vol_124_R vol_125_R vol_126_R vol_127_R vol_128_R
+vol_129_R vol_130_R vol_131_R vol_132_R vol_133_R vol_134_R vol_135_R vol_136_R
+vol_138_R vol_139_R vol_143_R vol_144_R vol_145_R vol_146_R vol_147_R vol_154_R
+vol_155_R vol_156_R vol_157_R vol_158_R vol_159_R vol_160_R vol_161_R vol_162_R
+vol_163_R vol_164_R vol_165_R vol_166_R vol_167_R vol_168_R vol_169_R vol_170_R
+vol_171_R vol_172_R vol_173_R vol_174_R vol_175_R vol_176_R vol_177_R vol_178_R
+vol_179_R vol_180_R vol_181_R vol_182_R vol_183_R vol_184_R vol_185_R vol_186_R
+vol_187_R vol_188_R vol_189_R vol_190_R vol_191_R vol_192_R vol_193_R vol_194_R
+vol_195_R vol_196_R vol_197_R vol_198_R vol_199_R vol_200_R vol_201_R vol_202_R
+vol_203_R vol_204_R vol_205_R vol_206_R vol_207_R vol_208_R vol_209_R vol_210_R
+vol_211_R vol_212_R vol_213_R vol_214_R vol_215_R vol_216_R vol_217_R vol_218_R
+vol_219_R vol_220_R vol_221_R vol_222_R vol_223_R vol_224_R vol_225_R vol_226_R
+vol_227_R vol_228_R vol_229_R vol_230_R vol_231_R vol_232_R vol_233_R vol_234_R
+vol_235_R vol_236_R vol_237_R vol_238_R vol_239_R vol_240_R vol_241_R vol_242_R
+vol_243_R vol_244_R vol_245_R vol_246_R vol_247_R vol_248_R vol_249_R vol_250_R
+vol_251_R vol_252_R vol_253_R vol_254_R vol_255_R vol_256_R vol_257_R vol_258_R
+vol_259_R vol_260_R vol_261_R vol_262_R vol_263_R vol_264_R vol_265_R vol_266_R
+vol_267_R vol_268_R vol_269_R vol_270_R vol_271_R vol_272_R vol_273_R vol_274_R
+vol_275_R vol_276_R vol_277_R vol_278_R vol_279_R vol_280_R vol_281_R vol_282_R
+vol_283_R vol_284_R vol_285_R vol_286_R vol_287_R vol_288_R vol_289_R vol_290_R
+vol_291_R vol_292_R vol_293_R vol_294_R vol_295_R vol_296_R vol_297_R vol_298_R
+vol_299_R vol_300_R vol_301_R vol_302_R vol_303_R;
+
+
+
+  USEVARIABLES ARE cbcl01 cbcl03 cbcl04 
+  cbcl07 cbcl09 cbcl10
+  cbcl13 cbcl15 cbcl16
+  cbcl17 cbcl19 cbcl22 cbcl23
+  cbcl25 cbcl26 cbcl27 cbcl28
+  cbcl30 cbcl31 cbcl32 cbcl33 cbcl34
+  cbcl35 cbcl37 cbcl39 cbcl41
+  cbcl43 cbcl46
+  cbcl50 cbcl51 cbcl52 cbcl56a
+  cbcl56b cbcl56c cbcl56f cbcl56g
+  cbcl57 cbcl61 cbcl62 cbcl66  cbcl68 
+  cbcl71 cbcl72 cbcl74 cbcl75
+  cbcl80 cbcl81 cbcl82 cbcl84
+  cbcl85 cbcl86 cbcl87 cbcl88 cbcl89
+  cbcl90 cbcl94
+  cbcl95 cbcl97 cbcl102 cbcl103
+  cbcl106 cbcl109 cbcl111 cbcl112
+  ATTEND DESTROY FEMALE AGE
+  NHWHITE AFRICAN HISPANIC
+  COIL2 COIL3 COIL4 COIL5
+  subcortical_sum 
+  vol_112-vol_116 vol_119-vol_121 
+  vol_124 vol_125 vol_130-vol_136 
+  vol_138 vol_139 vol_148;
+
+  CATEGORICAL=cbcl01 cbcl03 cbcl04 
+  cbcl07 cbcl09 cbcl10
+  cbcl13 cbcl15 cbcl16
+  cbcl17 cbcl19 cbcl22 cbcl23
+  cbcl25 cbcl26 cbcl27 cbcl28
+  cbcl30 cbcl31 cbcl32 cbcl33 cbcl34
+  cbcl35 cbcl37 cbcl39 cbcl41
+  cbcl43 cbcl46
+  cbcl50 cbcl51 cbcl52 cbcl56a
+  cbcl56b cbcl56c cbcl56f cbcl56g
+  cbcl57 cbcl61 cbcl62 cbcl66  cbcl68 
+  cbcl71 cbcl72 cbcl74 cbcl75
+  cbcl80 cbcl81 cbcl82 cbcl84
+  cbcl85 cbcl86 cbcl87 cbcl88 cbcl89
+  cbcl90 cbcl94
+  cbcl95 cbcl97 cbcl102 cbcl103
+  cbcl106 cbcl109 cbcl111 cbcl112
+  ATTEND DESTROY;
+
+  MISSING ARE .;
+    WEIGHT = PSWEIGHT;
+    STRATIFICATION=SITEN;
+    IDVARIABLE = subnum_char;
+    CLUSTER=FAMID;
+
+    DEFINE: STANDARDIZE subcortical_sum
+    vol_112-vol_116 
+    vol_119-vol_121 
+    vol_124 vol_125 vol_130-vol_136 
+    vol_138 vol_139 vol_148;
+
+    ANALYSIS:
+    ESTIMATOR=WLSMV;
+    ITERATIONS=500000;
+    TYPE = COMPLEX;
+
+  MODEL:
+
+  [GENERAL@0]; [INT@0]; [EXT@0]; [ADHD@0];
+  GENERAL@1; INT@1; EXT@1; ADHD@1; 
+
+  GENERAL BY CBCL01*.9 cbcl03 cbcl04 
+  cbcl07 cbcl09 cbcl10
+  cbcl13 cbcl15 cbcl16
+  cbcl17 cbcl19 cbcl22 cbcl23
+  cbcl25 cbcl26 cbcl27 cbcl28
+  cbcl30 cbcl31 cbcl32 cbcl33 cbcl34
+  cbcl35 cbcl37 cbcl39 cbcl41
+  cbcl43 cbcl46
+  cbcl50 cbcl51 cbcl52 cbcl56a
+  cbcl56b cbcl56c cbcl56f cbcl56g
+  cbcl57 cbcl61 cbcl62 cbcl66 cbcl68 
+  cbcl71 cbcl72 cbcl74 cbcl75
+  cbcl80 cbcl81 cbcl82 cbcl84
+  cbcl85 cbcl86 cbcl87 cbcl88 cbcl89
+  cbcl90 cbcl94
+  cbcl95 cbcl97 cbcl102 cbcl103
+  cbcl106 cbcl109 cbcl111 cbcl112
+  ATTEND DESTROY;
+
+  EXT BY CBCL03*.8 CBCL07 CBCL15 CBCL16
+  cbcl19 cbcl22 cbcl23
+  cbcl25 cbcl26 cbcl27 cbcl28 cbcl34
+  cbcl37 cbcl39 
+  cbcl43 cbcl57 cbcl68 cbcl72 cbcl74     
+  cbcl81 cbcl82 cbcl86 cbcl87 cbcl88 
+  cbcl89 cbcl90 cbcl94 cbcl95 cbcl97
+  cbcl106 cbcl109 DESTROY;
+
+  ADHD BY CBCL01*.8 cbcl04 cbcl09 cbcl10
+  cbcl13 cbcl17 cbcl41 cbcl46 cbcl61 
+  cbcl62 cbcl66 cbcl80 cbcl84 cbcl85
+  ATTEND;
+
+  INT BY CBCL30*.8 CBCL31 CBCL32 cbcl33 
+  CBCL35 CBCL50 cbcl51 CBCL52 
+  cbcl56a CBCL56B CBCL56C CBCL56F
+  CBCL56G CBCL71 CBCL75 
+  CBCL102 CBCL103 CBCL111 CBCL112;
+ 
+  GENERAL WITH INT @0;
+  GENERAL WITH EXT @0;
+  GENERAL WITH ADHD @0;
+  INT WITH EXT @0;
+  ADHD WITH EXT @0; ADHD WITH INT @0;
+
+
+vol_112 ON EXT 
+  GENERAL INT ADHD FEMALE AGE
+  NHWHITE AFRICAN HISPANIC
+  COIL2 COIL3 COIL4 COIL5 subcortical_sum;
+
+vol_113 ON EXT 
+  GENERAL INT ADHD FEMALE AGE
+  NHWHITE AFRICAN HISPANIC
+  COIL2 COIL3 COIL4 COIL5 subcortical_sum;
+
+vol_114 ON EXT 
+  GENERAL INT ADHD FEMALE AGE
+  NHWHITE AFRICAN HISPANIC
+  COIL2 COIL3 COIL4 COIL5 subcortical_sum;
+
+vol_115 ON EXT 
+  GENERAL INT ADHD FEMALE AGE
+  NHWHITE AFRICAN HISPANIC
+  COIL2 COIL3 COIL4 COIL5 subcortical_sum;
+
+vol_116 ON EXT 
+  GENERAL INT ADHD FEMALE AGE
+  NHWHITE AFRICAN HISPANIC
+  COIL2 COIL3 COIL4 COIL5 subcortical_sum;
+
+vol_119 ON EXT 
+  GENERAL INT ADHD FEMALE AGE
+  NHWHITE AFRICAN HISPANIC
+  COIL2 COIL3 COIL4 COIL5 subcortical_sum;
+
+vol_120 ON EXT 
+  GENERAL INT ADHD FEMALE AGE
+  NHWHITE AFRICAN HISPANIC
+  COIL2 COIL3 COIL4 COIL5 subcortical_sum;
+
+vol_121 ON EXT 
+  GENERAL INT ADHD FEMALE AGE
+  NHWHITE AFRICAN HISPANIC
+  COIL2 COIL3 COIL4 COIL5 subcortical_sum;
+
+vol_124 ON EXT 
+  GENERAL INT ADHD FEMALE AGE
+  NHWHITE AFRICAN HISPANIC
+  COIL2 COIL3 COIL4 COIL5 subcortical_sum;
+
+vol_125 ON EXT 
+  GENERAL INT ADHD FEMALE AGE
+  NHWHITE AFRICAN HISPANIC
+  COIL2 COIL3 COIL4 COIL5 subcortical_sum;
+
+vol_130 ON EXT 
+  GENERAL INT ADHD FEMALE AGE
+  NHWHITE AFRICAN HISPANIC
+  COIL2 COIL3 COIL4 COIL5 subcortical_sum;
+
+vol_131 ON EXT 
+  GENERAL INT ADHD FEMALE AGE
+  NHWHITE AFRICAN HISPANIC
+  COIL2 COIL3 COIL4 COIL5 subcortical_sum;
+
+vol_132 ON EXT 
+  GENERAL INT ADHD FEMALE AGE
+  NHWHITE AFRICAN HISPANIC
+  COIL2 COIL3 COIL4 COIL5 subcortical_sum;
+
+vol_133 ON EXT 
+  GENERAL INT ADHD FEMALE AGE
+  NHWHITE AFRICAN HISPANIC
+  COIL2 COIL3 COIL4 COIL5 subcortical_sum;
+
+vol_134 ON EXT 
+  GENERAL INT ADHD FEMALE AGE
+  NHWHITE AFRICAN HISPANIC
+  COIL2 COIL3 COIL4 COIL5 subcortical_sum;
+
+vol_135 ON EXT 
+  GENERAL INT ADHD FEMALE AGE
+  NHWHITE AFRICAN HISPANIC
+  COIL2 COIL3 COIL4 COIL5 subcortical_sum;
+
+vol_136 ON EXT 
+  GENERAL INT ADHD FEMALE AGE
+  NHWHITE AFRICAN HISPANIC
+  COIL2 COIL3 COIL4 COIL5 subcortical_sum;
+
+vol_138 ON EXT 
+  GENERAL INT ADHD FEMALE AGE
+  NHWHITE AFRICAN HISPANIC
+  COIL2 COIL3 COIL4 COIL5 subcortical_sum;
+
+vol_139 ON EXT 
+  GENERAL INT ADHD FEMALE AGE
+  NHWHITE AFRICAN HISPANIC
+  COIL2 COIL3 COIL4 COIL5 subcortical_sum;
+
+
+    OUTPUT: SAMPSTAT STDYX;
+
