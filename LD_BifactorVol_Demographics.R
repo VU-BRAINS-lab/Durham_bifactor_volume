@@ -32,10 +32,10 @@ sexTable_total
 
 #Percentage of females
 female_number <-length(which(subjData$FEMALE==1))
-percentfemale <- female_number/9672
+percentfemale <- female_number/9608
 percentfemale
 male_number <-length(which(subjData$FEMALE==0))
-percentmale <- male_number/9672
+percentmale <- male_number/9608
 percentmale
 
 #Total number of whites (1=non-hispanic white, 0=not)
@@ -56,16 +56,16 @@ otherraceTable_total
 
 #Percentage of each race group
 white_number <-length(which(subjData$NHWHITE==1))
-percentwhite <- white_number/9672
+percentwhite <- white_number/9608
 percentwhite
 hispanic_number <-length(which(subjData$HISPANIC==1))
-percenthispanic <- hispanic_number/9672
+percenthispanic <- hispanic_number/9608
 percenthispanic
 african_number <-length(which(subjData$AFRICAN==1))
-percentafrican <- african_number/9672
+percentafrican <- african_number/9608
 percentafrican
 otherrace_number <-length(which(subjData$OTHER==1))
-percentotherrace <- otherrace_number/9672
+percentotherrace <- otherrace_number/9608
 percentotherrace
 
 #Income Summary table
@@ -75,47 +75,47 @@ income_total
 #Percentage of each income response
 lessthanfivek_number <-length(which(subjData$income==1))
 lessthanfivek_number
-percentlessthanfivek <- lessthanfivek_number/9672
+percentlessthanfivek <- lessthanfivek_number/9608
 percentlessthanfivek
 fivektotwelvek_number <-length(which(subjData$income==2))
 fivektotwelvek_number
-percentfivektotwelvek <- fivektotwelvek_number/9672
+percentfivektotwelvek <- fivektotwelvek_number/9608
 percentfivektotwelvek
 twelvektosixteenk_number <-length(which(subjData$income==3))
 twelvektosixteenk_number
-percenttwelvektosixteenk <- twelvektosixteenk_number/9672
+percenttwelvektosixteenk <- twelvektosixteenk_number/9608
 percenttwelvektosixteenk
 sixteenktotwentyfivek_number <-length(which(subjData$income==4))
 sixteenktotwentyfivek_number
-percentsixteenktotwentyfivek <- sixteenktotwentyfivek_number/9672
+percentsixteenktotwentyfivek <- sixteenktotwentyfivek_number/9608
 percentsixteenktotwentyfivek
 twentyfivektothirtyfivek_number <-length(which(subjData$income==5))
 twentyfivektothirtyfivek_number
-percenttwentyfivektothirtyfivek <- twentyfivektothirtyfivek_number/9672
+percenttwentyfivektothirtyfivek <- twentyfivektothirtyfivek_number/9608
 percenttwentyfivektothirtyfivek
 thirtyfivektofiftyk_number <-length(which(subjData$income==6))
 thirtyfivektofiftyk_number
-percentthirtyfivektofiftyk <- thirtyfivektofiftyk_number/9672
+percentthirtyfivektofiftyk <- thirtyfivektofiftyk_number/9608
 percentthirtyfivektofiftyk 
 fiftyktoseventyfivek_number <-length(which(subjData$income==7))
 fiftyktoseventyfivek_number
-percentfiftyktoseventyfivek <- fiftyktoseventyfivek_number/9672
+percentfiftyktoseventyfivek <- fiftyktoseventyfivek_number/9608
 percentfiftyktoseventyfivek
 seventyfivektohundredk_number <-length(which(subjData$income==8))
 seventyfivektohundredk_number
-percentseventyfivektohundredk <- seventyfivektohundredk_number/9672
+percentseventyfivektohundredk <- seventyfivektohundredk_number/9608
 percentseventyfivektohundredk
 hundredktotwohundrek_number <-length(which(subjData$income==9))
 hundredktotwohundrek_number
-percenthundredktotwohundrek <- hundredktotwohundrek_number/9672
+percenthundredktotwohundrek <- hundredktotwohundrek_number/9608
 percenthundredktotwohundrek
 overtwohundredk_number <-length(which(subjData$income==10))
 overtwohundredk_number
-percentovertwohundredk <- overtwohundredk_number/9672
+percentovertwohundredk <- overtwohundredk_number/9608
 percentovertwohundredk
 missingincome_number <-length(which(subjData$income=="."))
 missingincome_number
-percentmissingincome <- missingincome_number/9672
+percentmissingincome <- missingincome_number/9608
 percentmissingincome
 
 #Parental Education Summary table
@@ -159,40 +159,48 @@ tenth_number
 eleventh_number <-length(which(parent_education==11))
 eleventh_number
 
+
+nodegree_number <- (neverorkindergarten_number + first_number + second_number + third_number +
+                      fourth_number + fifth_number + sixth_number + seventh_number + eighth_number +
+                      ninth_number + tenth_number + eleventh_number)
+nodegree_number
 percentnodegree <- (neverorkindergarten_number + first_number + second_number + third_number +
                       fourth_number + fifth_number + sixth_number + seventh_number + eighth_number +
-                      ninth_number + tenth_number + eleventh_number)/9672
+                      ninth_number + tenth_number + eleventh_number)/9608
 percentnodegree
 
 highschoolgradGED_number <-length(which(parent_education==12))
 highschoolgradGED_number
-percenthighschoolgradGED <- highschoolgradGED_number/9672
+percenthighschoolgradGED <- highschoolgradGED_number/9608
 percenthighschoolgradGED
 
 somecollege_number <-length(which(parent_education==13))
 somecollege_number
-percentsomecoll <- somecollege_number/9672
+percentsomecoll <- somecollege_number/9608
 percentsomecoll
 
 associate_number <-length(which(parent_education==14))
 associate_number
-percentassociate <- associate_number/9672
+percentassociate <- associate_number/9608
 percentassociate
 
 bachelors_number <-length(which(parent_education==16))
 bachelors_number
-percentbach <- bachelors_number/9672
+percentbach <- bachelors_number/9608
 percentbach
 
 masters_number <-length(which(parent_education==18))
 masters_number
-percentmasters <- masters_number/9672
+percentmasters <- masters_number/9608
 percentmasters
 
 profdocschool_number <-length(which(parent_education==20))
 profdocschool_number
-percentprofdocschool <- profdocschool_number/9672
+percentprofdocschool <- profdocschool_number/9608
 percentprofdocschool
 
-
+missingedu_number <-length(which(parent_education=="."))
+missingedu_number
+percentmissingedu <- missingedu_number/9608
+percentmissingedu
 

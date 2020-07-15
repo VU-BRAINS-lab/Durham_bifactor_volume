@@ -9,7 +9,6 @@ library(RColorBrewer)
 
 setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
 
-
 #LOAD MPLUS DAT FILE WITH EXTRACTED FACTORS
 bifactor_variables <- c("CBCL01", "CBCL03", "CBCL04", "CBCL07", "CBCL09", "CBCL10", "CBCL13", "CBCL15", "CBCL16", "CBCL17", 
                         "CBCL19", "CBCL22", "CBCL23", "CBCL25", "CBCL26", "CBCL27", "CBCL28", "CBCL30", "CBCL31", "CBCL32", 
@@ -19,13 +18,11 @@ bifactor_variables <- c("CBCL01", "CBCL03", "CBCL04", "CBCL07", "CBCL09", "CBCL1
                         "CBCL85", "CBCL86", "CBCL87", "CBCL88", "CBCL89", "CBCL90", "CBCL94", "CBCL95", "CBCL97", "CBCL102", 
                         "CBCL103", "CBCL106", "CBCL109", "CBCL111", "CBCL112", "ATTEND", "DESTROY", "GENERAL", "GENERAL_SE", 
                         "EXT", "EXT_SE", "ADHD", "ADHD_SE", "INT", "INT_SE", "PSWEIGHT", "subnum_char", "SITEN", "FAMID")
-bifactor_data <- read.table("Bifactor.dat", header = FALSE)
+bifactor_data <- read.table("BifactorScores.dat", header = FALSE)
 colnames(bifactor_data) = bifactor_variables
-View(bifactor_data)
 
 #CONDENSE MPLUS DAT FILE: delete all data except for subject number and factor scores 
 factorscores <- bifactor_data[c(grep("subnum_char|^GENERAL$|^EXT$|^ADHD$|^INT$", names(bifactor_data)))]
-View(factorscores)
 
 #LOAD CORTICAL VOLUME DAT FILE: merge column names with dat file
 dat_name <- sprintf('Cortical_Volume_Variable_names.txt',getwd())
@@ -36,7 +33,6 @@ colnames(dat) <- dat_n
 
 #MERGE THE TWO DAT FILES
 dataMerge <-merge(dat, factorscores, by=c("subnum_char"), all=TRUE) 
-View(dataMerge)
 
 ##CORTICAL REGIONS: creating a vector with all cortical regions, then creating a sum variable, then into cubic cm from cubic mm##
 cortical_regions <- c("vol_1", "vol_2", "vol_3", "vol_4", "vol_5", "vol_6", "vol_7", "vol_8", "vol_9", "vol_10", 
@@ -54,14 +50,22 @@ dataMerge$cortical_regions_sum_cm <- dataMerge$cortical_regions_sum/1000
 dataMerge$RACE <- names(dataMerge[10:13])[max.col(dataMerge[10:13])]
 dataMerge$COIL <- names(dataMerge[122:126])[max.col(dataMerge[122:126])]
 
-##MAKE COVARIATES FACTORS
+##DEFINE COVARIATES AS FACTORS OR NUMERIC
 dataMerge$FEMALEFACTOR <- as.factor(dataMerge$FEMALE)
+dataMerge$RACEFACTOR <- as.factor(dataMerge$RACE)
+dataMerge$COILFACTOR <- as.factor(dataMerge$COIL)
+dataMerge$ageNUMERIC <- as.numeric(dataMerge$age)
+dataMerge$generalNUMERIC <- as.numeric(dataMerge$GENERAL)
+dataMerge$extNUMERIC <- as.numeric(dataMerge$EXT)
+dataMerge$intNUMERIC <- as.numeric(dataMerge$INT)
+dataMerge$adhdNUMERIC <- as.numeric(dataMerge$ADHD)
 
 #RUN GAM MODELS
 attach(dataMerge)
 
-corticalGam <- gam(cortical_regions_sum_cm ~ age + FEMALEFACTOR + COIL + RACE +
-                     GENERAL + EXT + INT + ADHD, method="REML")
+corticalGam <- gam(cortical_regions_sum_cm ~ ageNUMERIC + FEMALEFACTOR + COILFACTOR + RACEFACTOR +
+                     generalNUMERIC + extNUMERIC + intNUMERIC + adhdNUMERIC, method="REML")
+summary(corticalGam)
 
 #Convert the fitted object to the gamViz class to use the tools in mgcViz
 corticalGamViz <- getViz(corticalGam)
@@ -80,7 +84,7 @@ plot(corticalGamViz, allTerms = TRUE, select = 5) +
         axis.text.y=element_text(size=10, colour="black")) +
   theme(legend.position = "none")
 
-ggsave(file="ScatterplotCorticalGen_updated.png", width = 3, height = 3, units = 'in', dpi = 300)
+ggsave(file="ScatterplotCorticalGen.png", width = 3, height = 3, units = 'in', dpi = 300)
 
 #cortical and conduct
 plot(corticalGamViz, allTerms = TRUE, select = 6) + 
@@ -94,7 +98,7 @@ plot(corticalGamViz, allTerms = TRUE, select = 6) +
         axis.text.y=element_text(size=10, colour="black")) +
   theme(legend.position = "none")
 
-ggsave(file="ScatterplotCorticalCon_updated.png", width = 3, height = 3, units = 'in', dpi = 300)
+ggsave(file="ScatterplotCorticalCon.png", width = 3, height = 3, units = 'in', dpi = 300)
 
 #cortical and adhd
 plot(corticalGamViz, allTerms = TRUE, select = 8) + 
@@ -108,7 +112,7 @@ plot(corticalGamViz, allTerms = TRUE, select = 8) +
         axis.text.y=element_text(size=10, colour="black")) +
   theme(legend.position = "none")
 
-ggsave(file="ScatterplotCorticalAdhd_updated.png", width = 3, height = 3, units = 'in', dpi = 300)
+ggsave(file="ScatterplotCorticalAdhd.png", width = 3, height = 3, units = 'in', dpi = 300)
 
 #cortical and internalizing
 plot(corticalGamViz, allTerms = TRUE, select = 7) + 
@@ -122,4 +126,4 @@ plot(corticalGamViz, allTerms = TRUE, select = 7) +
         axis.text.y=element_text(size=10, colour="black")) +
   theme(legend.position = "none")
 
-ggsave(file="ScatterplotCorticalInt_updated.png", width = 3, height = 3, units = 'in', dpi = 300)
+ggsave(file="ScatterplotCorticalInt.png", width = 3, height = 3, units = 'in', dpi = 300)

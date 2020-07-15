@@ -2,7 +2,7 @@ setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
 library(MplusAutomation)
 
 # read mplus output file
-modelResults <- readModels("OUTPUT FILE NAME")
+modelResults <- readModels("MPLUS OUTPUT FILE NAME.out")
 
 # read standardized results
 standardizedResults <- modelResults[["parameters"]][["stdyx.standardized"]]
@@ -100,9 +100,9 @@ Adhd <- data.frame(
 )
 
 #write data to csv
-write.table(Gen, "Desikan_data.csv", quote = FALSE, sep = ",", row.names=FALSE)
-write.table(Ext, "Desikan_data.csv", append = TRUE, quote = FALSE, sep = ",", row.names=FALSE, col.names = FALSE)
-write.table(Int, "Desikan_data.csv", append = TRUE, quote = FALSE, sep = ",", row.names=FALSE, col.names = FALSE)
-write.table(Adhd, "Desikan_data.csv", append = TRUE, quote = FALSE, sep = ",", row.names=FALSE, col.names = FALSE)
+write.table(Gen, "FILE NAME.csv", quote = FALSE, sep = ",", row.names=FALSE)
+write.table(Ext, "FILE NAME.csv", append = TRUE, quote = FALSE, sep = ",", row.names=FALSE, col.names = FALSE)
+write.table(Int, "FILE NAME.csv", append = TRUE, quote = FALSE, sep = ",", row.names=FALSE, col.names = FALSE)
+write.table(Adhd, "FILE NAME.csv", append = TRUE, quote = FALSE, sep = ",", row.names=FALSE, col.names = FALSE)
 
 
